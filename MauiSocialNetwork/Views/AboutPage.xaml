@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSocialNetwork.Views.AboutPage"
+             Title="AboutPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="background_app.png" Grid.Row="0" Aspect="Fill"/>
+
+        <Label Text="About app" FontSize="Title"/>
+
+    </Grid>
+</ContentPage>

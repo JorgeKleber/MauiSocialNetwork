@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSocialNetwork.Components.CardViewApp">
+    <Border
+        HeightRequest="370"
+        BackgroundColor="White"
+        StrokeShape="RoundRectangle 5">
+
+        <Border.GestureRecognizers>
+            <TapGestureRecognizer/>
+        </Border.GestureRecognizers>
+        
+        <Border.Shadow>
+            <Shadow Brush="Black" Offset="1,9" Opacity=".8"/>
+        </Border.Shadow>
+        
+        <VerticalStackLayout>
+
+            <Image x:Name="myImage" 
+                   Aspect="AspectFit"
+                   Margin="10,20,10,10">
+
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowImageCommand}"/>
+                </Image.GestureRecognizers>
+
+            </Image>
+
+            <Label x:Name="mySubtitle"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start" Margin="20,0,0,0" />
+                
+            <HorizontalStackLayout Margin="10,5,0,0">
+                <ImageButton Source="favorite" HeightRequest="25"/>
+                <ImageButton Source="chat" HeightRequest="25"/>
+                <ImageButton Source="share" HeightRequest="25"/>
+            </HorizontalStackLayout>
+                
+        </VerticalStackLayout>
+            
+    </Border>
+</ContentView>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MauiSocialNetwork.Components"
+             xmlns:viewModel="clr-namespace:MauiSocialNetwork.ViewModels"
+             x:DataType="viewModel:MainViewModel"
+             x:Class="MauiSocialNetwork.Views.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="background_app.png" Grid.Row="0" Aspect="AspectFill"/>
+
+            <VerticalStackLayout Grid.Row="1" TranslationY="-75">
+
+                <Border WidthRequest="150" 
+                    HeightRequest="150"
+                    StrokeThickness="3"
+                    Stroke="Red"
+                    StrokeShape="RoundRectangle 75"
+                    VerticalOptions="Start">
+
+                    <Image Source="user_pic.png"/>
+
+                </Border>
+
+                <Label Text="Ellen"
+                       FontSize="Title"
+                       HorizontalOptions="Center" Margin="0,10,0,0"/>
+
+            </VerticalStackLayout>
+
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <VerticalStackLayout Grid.Column="0" TranslationY="25">
+                    <Label Text="12k" HorizontalOptions="Center" Margin="0,0,0,5"/>
+                    <Label Text="Followers" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" TranslationY="25">
+                    <Label Text="12k" HorizontalOptions="Center" Margin="0,0,0,5"/>
+                    <Label Text="Following" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <Label Text="🌹Make good memories🌹" Grid.Row="2" Margin="20" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Grid Grid.Row="3"
+                  Margin="10">
+                <controls:CardViewApp ImageSource="{Binding PathImage}" DescriptionText="{Binding SubtitleImage}"/>
+            </Grid>
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
